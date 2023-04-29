@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 const cors = require("cors");
 const path = require("path");
 const app = express();
+app.use(cors());
 app.use(express.json());
 let db = null;
 const dbpath = path.join(__dirname, "bankingPortal.db");
