@@ -1,0 +1,49 @@
+POST http://localhost:3001/users/
+Content-Type: application/json
+
+{    
+    "name": "uday",
+    "password": "uday@2023",
+    "role":"customer",
+    "email":"udaychakravarthi22@gmail.com"
+}
+
+###
+
+POST http://localhost:3001/login/
+Content-Type: application/json
+
+{
+  "email":"udaychakravarthi22@gmail.com",
+  "password":"uday@2023"
+}
+
+###
+
+POST http://localhost:3001/user/make-transaction/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVkYXljaGFrcmF2YXJ0aGkyMkBnbWFpbC5jb20iLCJpYXQiOjE2ODI3NjUwNjF9.PP0qkSImT9RUlzoGZQFZPsiYNOqfV1QGpyeyDAdCohg
+Content-Type: application/json
+
+{    
+    "withdraw_amount": "2000",
+    "deposit_amount": "0",
+    "balance" : "4000"
+}
+
+###
+
+GET http://localhost:3001/user/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVkYXljaGFrcmF2YXJ0aGkyMkBnbWFpbC5jb20iLCJpYXQiOjE2ODI3NjUwNjF9.PP0qkSImT9RUlzoGZQFZPsiYNOqfV1QGpyeyDAdCohg
+
+###
+
+
+GET http://localhost:3001/banker/udaychakravarthi22@gmail.com/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVkYXljaGFrcmF2YXJ0aGkyMkBnbWFpbC5jb20iLCJpYXQiOjE2ODI3NjUwNjF9.PP0qkSImT9RUlzoGZQFZPsiYNOqfV1QGpyeyDAdCohg
+
+###
+
+GET http://localhost:3001/banker/all-users-transactions/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVkYXljaGFrcmF2YXJ0aGkyMkBnbWFpbC5jb20iLCJpYXQiOjE2ODI3NjUwNjF9.PP0qkSImT9RUlzoGZQFZPsiYNOqfV1QGpyeyDAdCohg
+
+###
